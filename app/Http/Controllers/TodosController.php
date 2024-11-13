@@ -32,6 +32,7 @@ public function index(){
             $todo->name=$request['name'];
             $todo->work=$request['work'];
             $todo->duedate=$request['duedate'];
+            $todo->status=$request['status'];
             $todo->save();
             return redirect(route("todo.home"));
 }
@@ -50,6 +51,7 @@ public function updateData(Request $request){
         $todo->name=$request['name'];
         $todo->work=$request['work'];
         $todo->duedate=$request['duedate'];
+        $todo->status=$request['status'];
         $todo->save();
         return redirect(route("todo.home"));
 }
